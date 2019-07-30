@@ -1,11 +1,7 @@
-$(document).ready( ()=>{
+$(document).ready( function(){
     let articleContainer = $('.article-container'); //#endregion
-    $(document).on('click', '.btn.delete', handleArticleDelete);
-    $(document).on('click', '.btn.notes', handleArticleNotes);
-    $(document).on('click', '.btn.save', handleNoteSave);
-    $(document).on('click', '.btn.note-delete', handleNoteDelete);
 
-    initPage();
+
 
     const initPage = ()=>{
         articleContainer.empty();
@@ -125,5 +121,10 @@ $(document).ready( ()=>{
             bootbox.hideAll()
         });
     }
+    initPage();
+    $(document).on('click', '.btn.delete', handleArticleDelete);
+    $(document).on('click', '.btn.notes', handleArticleNotes);
+    $(document).on('click', '.btn.save', handleNoteSave);
+    $(document).on('click', '.btn.note-delete', handleNoteDelete);
    
 })

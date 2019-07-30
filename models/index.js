@@ -2,5 +2,5 @@
 
 module.exports = {
   headline: require("./headlines"),
-  note: require("./note")
+  note: require("./notes")
 };

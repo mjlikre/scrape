@@ -4,7 +4,7 @@ const headline = require('../models/headlines');
 module.exports ={
     fetch: (cb)=>{
         scrape(data=>{
-            var articles = data;
+            let articles = data;
             articles.forEach(article => {
                 articles.date = makeDate();
                 articles.saved = false;
@@ -18,7 +18,7 @@ module.exports ={
     delete: (query, cb)=>{
         headline.remove(query, cb);
     },
-    get: (query, dv)=>{
+    get: (query, cb)=>{
         headline.find(query)
         .sort({
             _id: -1

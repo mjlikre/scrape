@@ -29,7 +29,7 @@ module.exports = router=>{
     });
     router.get('/api/headlines', (req, res)=>{
         let query = {};
-        if (req.query.saved){
+        if (req.query.saved === 'true'){
             query = req.query;
         }
         headlineController.get(query, (data)=>{
