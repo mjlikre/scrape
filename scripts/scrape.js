@@ -7,7 +7,7 @@ const scrape = cb=>{
         const $ = cheerio.load(body);
         const articles = []
 
-        $('.css-8atqhb').each((i, element)=>{
+        $('.css-6p6lnl').each((i, element)=>{
             // console.log($(this))
             const head = $(this).children('h2').text().trim();
             const sum = $(this).children('li').text().trim();

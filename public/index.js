@@ -56,7 +56,7 @@ $(document).ready(function(){
         $.get('/api/fetch')
             .then(data=>{
                 initPage()
-                bootbox.alert(`<h3 class ='text-center n0top-80> ${data.message} </h3>`);
+                alert(data.message);
             });
         
     }
